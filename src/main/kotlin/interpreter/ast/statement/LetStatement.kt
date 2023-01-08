@@ -6,8 +6,8 @@ import interpreter.ast.expression.Identifier
 
 class LetStatement(
     val token: Token,
-    val name: Identifier,
-    val value: Expression,
+    var name: Identifier? = null,
+    var value: Expression? = null,
 ): Statement {
     override fun tokenLiteral(): String {
         return this.token.literal
